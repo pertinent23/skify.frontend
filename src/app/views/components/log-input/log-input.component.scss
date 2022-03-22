@@ -1,0 +1,49 @@
+@use "src/mixins" as *;
+
+:host{
+  width: 100%;
+
+  .form-floating{
+
+    input{
+      height: 55px;
+      border-radius: 55px !important;
+      font-size: 0.85em;
+      padding-right: 50px;
+      transition-duration: 0.2s;
+      padding-left: 30px;
+
+      +i{
+        font-size: 22px;
+        color: $sonic-silver;
+        position: absolute;
+        right: 22px;
+        transition-duration: 0.2s;
+      }
+
+      &:focus{
+        box-shadow: none !important;
+        border-color: $french-violet;
+
+        ~label{
+          color: $french-violet;
+          opacity: 1;
+          font-weight: 600;
+          font-size: 0.85em;
+        }
+
+        +i{
+          color: $french-violet;
+        }
+      }
+    }
+
+    label{
+      padding-top: 18px;
+      font-size: 0.9em;
+      letter-spacing: 0.15em;
+      padding-left: 25px;
+      transition-duration: 0.2s;
+    }
+  }
+}

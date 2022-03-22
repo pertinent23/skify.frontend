@@ -1,0 +1,21 @@
+@use 'src/mixins' as * ;
+
+:host{
+  width: 100%;
+
+  .log-title-icon{
+    height: 75px;
+    width: 75px;
+  }
+
+  .log-title-text{
+    font-weight: 600;
+    font-size: 1.8em;
+    color:  $eerie-black;
+    letter-spacing: 0.12em;
+
+    @media screen and ( max-width: 576px ) {
+      font-size: 1.5em;
+    }
+  }
+}

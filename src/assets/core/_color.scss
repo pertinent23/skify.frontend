@@ -1,0 +1,7 @@
+@use './purple_blue' as *;
+
+@forward "./black";
+@forward "./purple_blue";
+
+$gradient: linear-gradient( 120deg, $purple, $slate-blue, $purple );
+$gradient2: linear-gradient( 120deg, $purple, $french-violet );

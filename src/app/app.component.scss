@@ -1,0 +1,12 @@
+@use 'src/mixins' as *;
+
+.global{
+  background-color: transparent;
+  min-height: 100vh;
+  overflow: auto;
+
+  .global-container{
+    width: 100%;
+    min-height: 100%;
+  }
+}

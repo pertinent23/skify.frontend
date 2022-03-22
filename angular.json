@@ -124,6 +124,16 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "prerender": false,
+            "ssr": false,
+            "browserTarget": "starting-pack:build:production",
+            "firebaseProject": "global2022-907b0",
+            "firebaseHostingSite": "skyfigenerator"
+          }
         }
       }
     }

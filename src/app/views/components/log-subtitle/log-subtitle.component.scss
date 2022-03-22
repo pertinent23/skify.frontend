@@ -1,0 +1,7 @@
+@use 'src/mixins' as *;
+
+.log-subtitle{
+  font-size: 1.1em;
+  color: $davys-grey;
+  letter-spacing: 0.13em;
+}

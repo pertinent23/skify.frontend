@@ -1,0 +1,10 @@
+@use 'src/mixins' as *;
+
+.content-btn{
+  .submit{
+    background-image: $gradient2;
+    color: $white;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+  }
+}

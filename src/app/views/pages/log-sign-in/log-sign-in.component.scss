@@ -1,0 +1,52 @@
+@use 'src/mixins' as *;
+
+:host{
+  width: 100%;
+  height: 100%;
+
+  .title-highlight{
+    background-image: $gradient2;
+    color: $white;
+    border-radius: 5px;
+  }
+
+  .content-all{
+    height: 100%;
+
+    .container{
+      max-width: 400px;
+
+      .content-inputs{
+        flex: 1;
+      }
+    }
+
+    .content-error{
+      overflow: hidden;
+      p{
+        font-size: 0.85em;
+        word-wrap: break-word;
+        max-width: 250px;
+        @include text-truncate( 2, 1.5em );
+      }
+    }
+
+    .log-options{
+      font-size: 0.85em;
+      color: $davys-grey;
+
+      span{
+        color: $french-violet;
+        cursor: pointer;
+      }
+    }
+  }
+
+  @media screen and ( max-width: 768px ) {
+    min-height: 100vh;
+
+    .content-all{
+      min-height: 100vh;
+    }
+  }
+}

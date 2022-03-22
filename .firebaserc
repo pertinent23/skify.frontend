@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "global2022-907b0"
+  },
+  "targets": {
+    "global2022-907b0": {
+      "hosting": {
+        "starting-pack": [
+          "skyfigenerator"
+        ]
+      }
+    }
+  }
+}

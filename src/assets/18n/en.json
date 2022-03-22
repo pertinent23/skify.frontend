@@ -1,0 +1,20 @@
+{
+  "form.welcome": "Welcome To",
+  "form.subtitle.start": "start a new project",
+  "form.subtitle.forgot-password": "forgot password",
+  "form.subtitle.change-password": "your new password",
+  "form.input.label.email": "Email",
+  "form.input.label.name": "Name",
+  "form.input.label.password": "Password",
+  "form.button.label.sign-in": "Connexion",
+  "form.button.label.sign-up": "Inscription",
+  "form.button.label.change-password": "Save",
+  "form.button.label.forgot-password": "Send",
+  "form.utils.forgot": "forgot",
+  "form.utils.received-email": "you will receive an email",
+  "form.utils.sign-in": "sign-up",
+  "form.utils.sign-up": "sign-in",
+  "form.utils.sign-in-text": "You don't have an account",
+  "form.utils.sign-up-text": "Already have an account",
+  "form.utils.forgot-password-text": "Already have an password "
+}

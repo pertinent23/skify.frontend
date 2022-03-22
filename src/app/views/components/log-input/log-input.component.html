@@ -1,0 +1,14 @@
+<div class="w-100 form-floating d-flex align-items-center">
+  <input
+    [type]="this.type"
+    [name]="this.id"
+    [id]="this.id"
+    class="form-control"
+    [placeholder]="this.placeholder"
+    [value]="this.input"
+    (change)="this.inputChange.emit( field.value )"
+    #field
+  >
+  <i class="bi bi-{{ this.icon }}"></i>
+  <label for="{{ this.id }}"> {{ this.label }} </label>
+</div>

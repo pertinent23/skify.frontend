@@ -1,0 +1,34 @@
+@use './color' as *;
+
+@mixin shadow( $color, $space, $dim: 4px ) {
+  box-shadow: $dim $dim $space $color,
+            $dim ($dim * -1) $space $color,
+            ($dim * -1) ($dim * -1) $space $color,
+            ($dim * -1) $dim $space $color;
+}
+
+@mixin  text-break {
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+@mixin line-truncate {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@mixin  text-truncate( $lines: 4, $height: 1em ) {
+  -webkit-box-orient: vertical;
+  line-height: $height;
+  max-height: calc( $height * $lines );
+  display: block;
+  display: -webkit-box;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: $lines;
+}

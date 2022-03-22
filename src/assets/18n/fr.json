@@ -1,0 +1,20 @@
+{
+  "form.welcome": "Bienvenue Sur",
+  "form.subtitle.start": "commencer un nouveau projet",
+  "form.subtitle.forgot-password": "mot de passe oublié",
+  "form.subtitle.change-password": "notre nouveau mot de passe",
+  "form.input.label.email": "Email",
+  "form.input.label.name": "Nom",
+  "form.input.label.password": "Mot de Passe",
+  "form.button.label.sign-in": "Connection",
+  "form.button.label.sign-up": "Inscription",
+  "form.button.label.change-password": "Enregistrer",
+  "form.button.label.forgot-password": "Envoyer",
+  "form.utils.forgot": "oublié",
+  "form.utils.received-email": "vous recevrez un email",
+  "form.utils.sign-in": "inscrivez-vous",
+  "form.utils.sign-up": "connectez-vous",
+  "form.utils.sign-in-text": "Vous n'avez pas de compte",
+  "form.utils.sign-up-text": "Vous avez déjà un compte",
+  "form.utils.forgot-password-text": "vous avez un mot de passe "
+}

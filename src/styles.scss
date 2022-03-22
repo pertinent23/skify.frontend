@@ -1,1 +1,48 @@
-/* You can add global styles to this file, and also import other style files */
+@use 'src/mixins' as *;
+
+@font-face {
+  font-family: ubuntu;
+  src: url( './assets/fonts/Ubuntu-Light.ttf' );
+}
+
+@font-face {
+  font-family: plento;
+  src: url( './assets/fonts/PLENTO.ttf' );
+}
+
+
+::-webkit-scrollbar{
+  width: 0px;
+  height: 0px;
+
+  @media screen and ( min-width: 576px ) {
+    width: 6px;
+    height: 6px;
+  }
+}
+
+::-webkit-scrollbar-track {
+  background: $cadet-blue-crayola;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $purple;
+  opacity: 0.65;
+  transition-duration: 0.1s;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  opacity: 0.8;
+}
+
+*{
+  position: relative;
+  font-family: ubuntu;
+}
+
+body{
+  margin: 0px;
+  padding: 0px;
+  background-image: $gradient2;
+}

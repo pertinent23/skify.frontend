@@ -1,0 +1,88 @@
+@use 'src/mixins' as *;
+
+:host{
+  width: 100%;
+
+  .log-container{
+    min-height: 100vh;
+    width: 100%;
+
+    .log-container-decorator{
+      position: absolute;
+
+      .log-container-decorator-item{
+        background-color: $white;
+
+        @media screen and ( min-width: 576px ) {
+          //clip-path: polygon( 0% 100%, 100% 0%, 100% 100%, 0% 100% );
+          //clip-path: polygon( 0% 35%, 50% 60%, 100% 40%, 100% 0%, 0% 0%, 0% 35% );
+          clip-path: url( #shape );
+        }
+      }
+    }
+
+    .log-container-form{
+      min-height: 100vh;
+      width: 100%;
+      background-color: $white;
+      overflow: hidden;
+
+      @media screen and ( min-width: 768px ) {
+        max-width: 500px;
+        min-height: fit-content;
+        min-height: 450px;
+        height: auto;
+        height: min-content !important;
+        border-radius: 6px;
+
+        $size: 10px;
+        @include shadow( rgba( $eerie-black, 0.05 ), $size, $size );
+      }
+
+      @media screen and ( min-width: 992px ) {
+        max-width: 950px;
+      }
+
+      .log-container-form-item{
+        flex: 1;
+        height: 100%;
+
+        &:nth-child( 1 ) {
+          width: 55%;
+          height: 110%;
+          left: -5px;
+          position: absolute;
+          background-image: $gradient2;
+          //clip-path: polygon( 0% 0%, 80% 0%, 100% 100%, 0% 100%, 0% 0% );
+          clip-path: ellipse( 70% 72% at 30% 20%);
+          padding-right: 5%;
+        }
+
+        @media screen and ( max-width: 768px ) {
+          min-height: 100vh;
+        }
+
+        .log-container-presentation{
+          .log-container-content-image{
+            img{
+              width: 150px;
+              height: 150px;
+            }
+          }
+
+          .log-container-content-app-name{
+            font-weight: 600;
+            color: $white;
+
+            p{
+              text-transform: uppercase;
+              letter-spacing: 0.3em;
+              font-size: 3em;
+              font-family: plento;
+            }
+          }
+        }
+      }
+    }
+  }
+}

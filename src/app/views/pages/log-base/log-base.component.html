@@ -1,0 +1,40 @@
+<div class="d-flex justify-content-center align-items-center log-container py-md-4">
+  <svg height="0" width="0">
+    <defs>
+      <clipPath id="shape">
+        <path
+          d="
+            M0 0 L0 300
+            C0 300 300 100 700 500
+            C800 600 1000 250 1400 300
+            L1400 0 C 1400 0 650 200 500 0 L0 0"
+          fill="#FFFFFF"
+          stroke="#FFFFFF"
+          stroke-width="5"
+        />
+      </clipPath>
+    </defs>
+  </svg>
+  <div class="log-container-decorator d-flex justify-content-center align-items-center h-100 w-100">
+    <div class="log-container-decorator-item d-block w-100 h-100"></div>
+  </div>
+  <div class="log-container-form d-flex justify-content-center align-items-center">
+    <div class="log-container-form-item d-none d-lg-flex flex-column justify-content-center align-items-center">
+      <div class="w-100 d-flex justify-content-center align-items-center flex-column log-container-presentation">
+        <div class="log-container-content-image d-flex justify-content-center align-items-center">
+          <img src="/assets/img/icons/icon.png" alt="icon" class="icon-image">
+        </div>
+        <div class="w-100 d-flex justify-content-center log-container-content-app-name mt-3">
+          <p> skifi </p>
+        </div>
+      </div>
+    </div>
+    <div class="log-container-form-item d-none d-lg-block"></div>
+    <div
+      class="log-container-form-item d-flex flex-column justify-content-center align-items-center"
+      [@slideUpAnimation]="this.getAnimationData( outlet )"
+    >
+      <router-outlet #outlet="outlet"></router-outlet>
+    </div>
+  </div>
+</div>
