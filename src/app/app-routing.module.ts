@@ -9,6 +9,11 @@ import { LogSignUpComponent } from './views/pages/log-sign-up/log-sign-up.compon
 import { LogChangePasswordComponent } from './views/pages/log-change-password/log-change-password.component';
 import { LogForgotPasswordComponent } from './views/pages/log-forgot-password/log-forgot-password.component';
 
+import { AccountBaseComponent } from './views/pages/account-base/account-base.component';
+import { AccountProfileComponent } from './views/pages/account-profile/account-profile.component';
+import { AccountProjectsComponent } from './views/pages/account-projects/account-projects.component';
+import { AccountInfosComponent } from './views/pages/account-infos/account-infos.component';
+
 const routes: Routes = [
   { path: '', redirectTo: '/fr/log/sign-in', pathMatch: 'full', data: { animation: 'base' } },
   { path: ':lang', component: LangBaseComponent, data: { animation: 'lang' }, children: [
@@ -19,6 +24,12 @@ const routes: Routes = [
       { path: 'sign-up', component: LogSignUpComponent, data: { animation: 'log-sin-up' } },
       { path: 'forgot-password', component: LogForgotPasswordComponent, data: { animation: 'log-forgot-password' } },
       { path: 'change-password', component: LogChangePasswordComponent, data: { animation: 'log-change-password' } },
+    ] },
+    { path: 'account', component: AccountBaseComponent, data: { animation: 'account' }, children: [
+      { path: '', redirectTo: 'projects', pathMatch: 'full' },
+      { path: 'profile', component: AccountProfileComponent, data: { animation: 'account-profile' } },
+      { path: 'projects', component: AccountProjectsComponent, data: { animation: 'account-projects' } },
+      { path: 'infos', component: AccountInfosComponent, data: { animation: 'account-infos' } }
     ] }
   ] },
 ];

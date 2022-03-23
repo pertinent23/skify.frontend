@@ -1,0 +1,150 @@
+@use 'src/mixins' as *;
+
+:host{
+  position: relative;
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  background-color: $cultured-2;
+
+  .account-container{
+    width: 100%;
+    min-height: 100vh;
+
+    @media screen and ( min-width: 768px ) {
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .account-menu-container{
+      width: 300px;
+      height: 100%;
+      transition-duration: 0.2s;
+      background-color: $cultured;
+
+      @media screen and ( max-width: 768px ) {
+        position: fixed;
+
+        &.open{
+          right: 0px;
+        }
+
+        &.close{
+          right: -300px;
+        }
+      }
+
+      .account-menu-brand-head{
+        img{
+          height: 70px;
+          width: 70px;
+        }
+
+        p{
+          font-size: 1.7em;
+          font-family: plento;
+          color: $purple;
+          font-weight: 600;
+          letter-spacing: 0.6em;
+        }
+      }
+
+      .account-menu-content-items{
+        background-color: $purple;
+        border-radius: 15px;
+
+        .account-menu-item{
+          margin-top: 13px !important;
+          cursor: pointer;
+
+          .account-menu-item-container{
+            width: calc( 100% - 30px );
+            border-radius: 50px;
+            color: $cultured-2;
+            transition-duration: 0.2s;
+
+            i{
+              font-size: 23px;
+              transition-duration: 0.2s;
+            }
+
+            p{
+              font-size: 0.95em;
+              font-weight: 600;
+              text-transform: uppercase;
+              letter-spacing: 0.12em;
+              transition-duration: 0.2s;
+            }
+          }
+
+          &.active{
+            .account-menu-item-container{
+              background-color: $cultured;
+              color: $purple;
+              padding-left: 35px !important;
+
+              $size: 7px;
+              @include shadow( rgba( $eerie-black, 0.05 ), $size, $size );
+
+              i{
+                margin-right: 5px !important;
+              }
+            }
+          }
+        }
+      }
+
+      .account-menu-decorator{
+        img{
+          max-width: calc( 100% - 30px );
+          max-height: 200px;
+        }
+      }
+    }
+
+    .account-pages-container{
+      flex: 1;
+      height: 100%;
+      max-height: 100vh;
+
+      .account-nav{
+        background-color: transparent;
+        -webkit-backdrop-filter: blur( 5px );
+        backdrop-filter: blur( 5px );
+        .account-nav-button{
+          background-color: $purple;
+          color: $white;
+          height: 50px;
+          width: 50px;
+          border-radius: 100%;
+          border: none;
+          outline: none;
+          transition-duration: 0.2s;
+
+          &:hover{
+            $size: 5px;
+            @include shadow( rgba( $purple, 0.3 ), $size, $size );
+          }
+
+          &:active,
+          &:focus{
+            box-shadow: none !important;
+          }
+
+          i{
+            font-size: 20px;
+          }
+        }
+
+        .account-nav-title{
+          font-size: 1.5em;
+          text-transform: uppercase;
+          font-family: plento;
+          font-weight: 600;
+          letter-spacing: 0.15em;
+          color: $purple;
+        }
+      }
+    }
+  }
+}

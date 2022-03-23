@@ -7,6 +7,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+
 import { LogBaseComponent } from './views/pages/log-base/log-base.component';
 import { LogInputComponent } from './views/components/log-input/log-input.component';
 import { LogButtonComponent } from './views/components/log-button/log-button.component';
@@ -17,6 +18,11 @@ import { LogSubtitleComponent } from './views/components/log-subtitle/log-subtit
 import { LangBaseComponent } from './views/pages/lang-base/lang-base.component';
 import { LogForgotPasswordComponent } from './views/pages/log-forgot-password/log-forgot-password.component';
 import { LogChangePasswordComponent } from './views/pages/log-change-password/log-change-password.component';
+
+import { AccountBaseComponent } from './views/pages/account-base/account-base.component';
+import { AccountProjectsComponent } from './views/pages/account-projects/account-projects.component';
+import { AccountProfileComponent } from './views/pages/account-profile/account-profile.component';
+import { AccountInfosComponent } from './views/pages/account-infos/account-infos.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +36,11 @@ import { LogChangePasswordComponent } from './views/pages/log-change-password/lo
     LogSubtitleComponent,
     LangBaseComponent,
     LogForgotPasswordComponent,
-    LogChangePasswordComponent
+    LogChangePasswordComponent,
+    AccountBaseComponent,
+    AccountProjectsComponent,
+    AccountProfileComponent,
+    AccountInfosComponent
   ],
   imports: [
     BrowserModule,
@@ -45,8 +55,8 @@ import { LogChangePasswordComponent } from './views/pages/log-change-password/lo
       }
     } )
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [ ],
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }
 

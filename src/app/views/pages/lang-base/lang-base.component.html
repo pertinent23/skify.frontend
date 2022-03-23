@@ -1,1 +1,3 @@
-<router-outlet></router-outlet>
+<div class="w-100 lang-container overflow-hidden" [@fadeAnimation]="this.getAnimationData(outlet)">
+  <router-outlet #outlet="outlet"></router-outlet>
+</div>

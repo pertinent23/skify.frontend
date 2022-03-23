@@ -1,0 +1,55 @@
+<div class="w-100 d-flex account-container">
+  <div class="d-flex flex-column account-container-items account-menu-container px-3 shadow close">
+    <div class="w-100 d-flex align-items-center account-menu-brand">
+      <div class="w-100 account-menu-brand-head d-flex flex-column align-items-center justify-content-center pt-4 pb-2">
+        <img src="/assets/img/icons/icon.fill.png" alt="skyfi icon">
+        <p class="account-menu-brand-title text-uppercase mt-4"> Skyfi </p>
+      </div>
+    </div>
+    <div class="w-100 d-flex flex-column account-menu-content-items py-3 mt-2">
+      <div class="w-100 account-menu-item d-flex justify-content-center align-items-center" routerLinkActive="active">
+        <div class="account-menu-item-container d-flex align-items-center px-3 py-2 mb-2 ps-4" routerLink="./projects">
+          <i class="bi bi-folder-fill me-3"></i>
+          <p class="menu-item-text m-0 ps-2"> Mes dossiers </p>
+        </div>
+      </div>
+      <div class="w-100 account-menu-item d-flex justify-content-center align-items-center" routerLinkActive="active">
+        <div class="account-menu-item-container d-flex align-items-center px-3 py-2 mb-2 ps-4" routerLink="./profile">
+          <i class="bi bi-person-video3 me-3"></i>
+          <p class="menu-item-text m-0 ps-2"> Mon compte </p>
+        </div>
+      </div>
+      <div class="w-100 account-menu-item d-flex justify-content-center align-items-center" routerLinkActive="active">
+        <div class="account-menu-item-container d-flex align-items-center px-3 py-2 mb-2 ps-4" routerLink="./infos">
+          <i class="bi bi-tools me-3"></i>
+          <p class="menu-item-text m-0 ps-2"> Informations </p>
+        </div>
+      </div>
+    </div>
+    <div class="w-100 account-menu-decorator d-flex justify-content-center align-items-center py-4">
+      <img src="/assets/img/illustrations/img2.svg" alt="menu illustration">
+    </div>
+  </div>
+  <div class="d-flex flex-column account-container-items account-pages-container overflow-auto">
+    <div class="w-100 d-flex align-items-center justify-content-between account-nav p-3 sticky-top">
+      <div class="d-flex align-items-center account-nav-start">
+        <button class="btn account-nav-button">
+          <i class="bi bi-house-heart-fill"></i>
+        </button>
+        <p class="account-nav-title text-truncate ps-4 m-0"> the title </p>
+      </div>
+      <div class="d-flex align-items-center account-nav-end">
+        <button class="btn account-nav-button mx-2">
+          <i class="bi bi-globe2"></i>
+        </button>
+        <button class="btn account-nav-button mx-2">
+          <i class="bi bi-gear-fill"></i>
+        </button>
+        <button class="btn account-nav-button mx-2">
+          <i class="bi bi-power"></i>
+        </button>
+      </div>
+    </div>
+    <router-outlet></router-outlet>
+  </div>
+</div>
