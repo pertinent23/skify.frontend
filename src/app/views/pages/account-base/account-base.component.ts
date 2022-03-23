@@ -1,13 +1,17 @@
 import { Component, OnInit } from '@angular/core';
+import { slideUpAnimation, Animations } from 'src/app/class/animations';
 
 @Component({
   selector: 'app-account-base',
   templateUrl: './account-base.component.html',
-  styleUrls: ['./account-base.component.scss']
+  styleUrls: ['./account-base.component.scss'],
+  animations: [ slideUpAnimation ]
 })
-export class AccountBaseComponent implements OnInit {
+export class AccountBaseComponent extends Animations implements OnInit {
 
-  constructor() { }
+  constructor() {
+    super();
+  }
 
   ngOnInit(): void {
   }

@@ -1,0 +1,27 @@
+@use 'src/mixins' as *;
+
+:host{
+  width: 100%;
+
+  .project-add-items{
+    height: 190px;
+    background-color: $cultured;
+    border-radius: 15px;
+    transition-duration: 0.2s;
+    cursor: pointer;
+
+    i{
+      font-size: 50px;
+      color: $purple;
+    }
+
+    &:hover{
+      $size: 5px;
+      @include shadow( rgba( $eerie-black, 0.03 ), $size, $size );
+    }
+
+    @media screen and ( min-width: 768px ) {
+      height: 230px;
+    }
+  }
+}

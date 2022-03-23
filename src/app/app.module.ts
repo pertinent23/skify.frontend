@@ -23,6 +23,7 @@ import { AccountBaseComponent } from './views/pages/account-base/account-base.co
 import { AccountProjectsComponent } from './views/pages/account-projects/account-projects.component';
 import { AccountProfileComponent } from './views/pages/account-profile/account-profile.component';
 import { AccountInfosComponent } from './views/pages/account-infos/account-infos.component';
+import { AccountProjectItemComponent } from './views/components/account-project-item/account-project-item.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { AccountInfosComponent } from './views/pages/account-infos/account-infos
     AccountBaseComponent,
     AccountProjectsComponent,
     AccountProfileComponent,
-    AccountInfosComponent
+    AccountInfosComponent,
+    AccountProjectItemComponent
   ],
   imports: [
     BrowserModule,
