@@ -25,7 +25,8 @@
     .project-item-head{
       background-color: $purple;
       height: 110px;
-      clip-path: polygon( 0% 0%, 0% 85%, 15% 100%, 85% 100%, 100% 85%, 100% 0%, 0% 0% );
+      //clip-path: polygon( 0% 0%, 0% 85%, 15% 100%, 85% 100%, 100% 85%, 100% 0%, 0% 0% );
+      clip-path: ellipse( 80% 77% at 35% 23% );
 
       i{
         font-size: 70px;
@@ -33,7 +34,7 @@
       }
 
       @media screen and ( min-width: 768px ) {
-        height: 120px;
+        height: 130px;
       }
     }
 

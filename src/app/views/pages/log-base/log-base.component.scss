@@ -33,7 +33,7 @@
         min-height: 450px;
         height: auto;
         height: min-content !important;
-        border-radius: 6px;
+        border-radius: 15px;
 
         $size: 10px;
         @include shadow( rgba( $eerie-black, 0.05 ), $size, $size );

@@ -50,7 +50,7 @@
       }
 
       .account-menu-content-items{
-        background-color: $purple;
+        background-image: $gradient2;
         border-radius: 15px;
 
         .account-menu-item{
@@ -111,8 +111,9 @@
         background-color: transparent;
         -webkit-backdrop-filter: blur( 5px );
         backdrop-filter: blur( 5px );
+
         .account-nav-button{
-          background-color: $purple;
+          background-image: $gradient2;
           color: $white;
           height: 50px;
           width: 50px;
