@@ -12,10 +12,20 @@
   .project-item{
     height: 100%;
     width: 100%;
-    background-color: $cultured;
     border-radius: 15px;
     overflow: hidden;
     cursor: pointer;
+
+    &::before{
+      content: "";
+      display: block;
+      position: absolute;
+      height: 80%;
+      width: 100%;
+      left: 0px;
+      bottom: 0px;
+      background-color: $purple;
+    }
 
     &:hover{
       $size: 5px;
@@ -23,18 +33,22 @@
     }
 
     .project-item-head{
-      background-color: $purple;
-      height: 110px;
+      background-color: $cultured;
+      height: 120px;
       //clip-path: polygon( 0% 0%, 0% 85%, 15% 100%, 85% 100%, 100% 85%, 100% 0%, 0% 0% );
       clip-path: ellipse( 80% 77% at 35% 23% );
 
       i{
-        font-size: 70px;
-        color: $cultured;
+        font-size: 50px;
+        color: $purple;
       }
 
       @media screen and ( min-width: 768px ) {
-        height: 130px;
+        height: 150px;
+
+        i{
+          font-size: 65px;
+        }
       }
     }
 
@@ -42,21 +56,22 @@
       flex: 1;
 
       .project-item-title{
-        font-size: 0.9em;
+        font-size: 0.75em;
         font-weight: 600;
-        letter-spacing: 0.13em;
-        color: $davys-grey;
+        letter-spacing: 0.1em;
+        color: $cultured;
+        text-transform: uppercase;
       }
 
       .project-description{
-        font-size: 0.75em;
+        font-size: 0.65em;
         width: 100%;
-        color: $davys-grey;
+        color: $cultured-2;
       }
 
       @media screen and ( min-width: 768px ) {
         .project-item-title{
-          font-size: 1.2em;
+          font-size: 0.95em;
         }
 
         .project-description{
