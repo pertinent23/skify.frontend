@@ -24,6 +24,8 @@ import { AccountProjectsComponent } from './views/pages/account-projects/account
 import { AccountProfileComponent } from './views/pages/account-profile/account-profile.component';
 import { AccountInfosComponent } from './views/pages/account-infos/account-infos.component';
 import { AccountProjectItemComponent } from './views/components/account-project-item/account-project-item.component';
+import { AccountProjectsListComponent } from './views/pages/account-projects-list/account-projects-list.component';
+import { AccountProjectsCreateComponent } from './views/pages/account-projects-create/account-projects-create.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,9 @@ import { AccountProjectItemComponent } from './views/components/account-project-
     AccountProjectsComponent,
     AccountProfileComponent,
     AccountInfosComponent,
-    AccountProjectItemComponent
+    AccountProjectItemComponent,
+    AccountProjectsListComponent,
+    AccountProjectsCreateComponent
   ],
   imports: [
     BrowserModule,

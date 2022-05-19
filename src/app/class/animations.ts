@@ -59,6 +59,34 @@ export const slideInAnimation = trigger( 'slideInAnimation', [
   ] )
 ] );
 
+export const slideInMonoAnimation = trigger( 'slideInMonoAnimation', [
+  transition( '* <=> *', [
+    query( ':enter, :leave', style( {
+      position: 'relative',
+      width: '100%',
+      backgroundColor: 'red'
+    } ), { optional: true } ),
+    group( [
+      query( ':enter', [
+        style( {
+          transform: 'translateX(100%)',
+          opacity: 0.5
+        } ),
+        animate( '0.8s ease-in-out', style( {
+          transform: 'translateX(0%)',
+          opacity: 1
+        } ) )
+      ], { optional: true } ),
+      query( ':leave', [
+        style( {
+          transform: 'translateX(-100%)',
+          opacity: 1
+        } )
+      ], { optional: true } ),
+    ] )
+  ] )
+] );
+
 export const slideUpAnimation = trigger( 'slideUpAnimation', [
   transition( ':leave', [
     style( {

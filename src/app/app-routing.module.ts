@@ -11,8 +11,11 @@ import { LogForgotPasswordComponent } from './views/pages/log-forgot-password/lo
 
 import { AccountBaseComponent } from './views/pages/account-base/account-base.component';
 import { AccountProfileComponent } from './views/pages/account-profile/account-profile.component';
-import { AccountProjectsComponent } from './views/pages/account-projects/account-projects.component';
 import { AccountInfosComponent } from './views/pages/account-infos/account-infos.component';
+
+import { AccountProjectsComponent } from './views/pages/account-projects/account-projects.component';
+import { AccountProjectsListComponent } from './views/pages/account-projects-list/account-projects-list.component';
+import { AccountProjectsCreateComponent } from './views/pages/account-projects-create/account-projects-create.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/fr/log/sign-in', pathMatch: 'full', data: { animation: 'base' } },
@@ -28,7 +31,11 @@ const routes: Routes = [
     { path: 'account', component: AccountBaseComponent, data: { animation: 'account' }, children: [
       { path: '', redirectTo: 'projects', pathMatch: 'full' },
       { path: 'profile', component: AccountProfileComponent, data: { animation: 'account-profile' } },
-      { path: 'projects', component: AccountProjectsComponent, data: { animation: 'account-projects' } },
+      { path: 'projects', component: AccountProjectsComponent, data: { animation: 'account-projects' }, children: [
+        { path: '', redirectTo: 'list', pathMatch: 'full' },
+        { path: 'list', component: AccountProjectsListComponent, data: { animation: 'account-projects-list' } },
+        { path: 'create', component: AccountProjectsCreateComponent, data: { animation: 'account-projects-create' } }
+      ] },
       { path: 'infos', component: AccountInfosComponent, data: { animation: 'account-infos' } }
     ] }
   ] },

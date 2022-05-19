@@ -1,0 +1,44 @@
+@use 'src/mixins' as *;
+
+:host{
+  width: 100%;
+
+  .project-add-items{
+    height: 190px;
+    background-color: $cultured;
+    border-radius: 15px;
+    transition-duration: 0.2s;
+    cursor: pointer;
+    overflow: hidden;
+
+    i{
+      font-size: 40px;
+      color: $purple;
+    }
+
+    &:hover{
+      $size: 5px;
+      @include shadow( rgba( $eerie-black, 0.03 ), $size, $size );
+    }
+
+    .project-add-items-title{
+      top: 73%;
+      font-size: 0.65em;
+      color: $purple;
+      font-weight: bold;
+      letter-spacing: 0.12em;
+    }
+
+    @media screen and ( min-width: 768px ) {
+      height: 230px;
+
+      i{
+        font-size: 50px;
+      }
+
+      .project-add-items-title{
+        font-size: 0.9em;
+      }
+    }
+  }
+}
