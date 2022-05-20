@@ -6,7 +6,10 @@
     </app-log-title>
     <app-log-subtitle subtitle="{{  'form.subtitle.start' | translate }}"></app-log-subtitle>
   </div>
-  <div class="container d-flex flex-column justify-content-center content-inputs px-md-5 pt-4">
+  <form
+    class="container d-flex flex-column justify-content-center content-inputs px-md-5 pt-4"
+    [formGroup]="user"
+  >
     <div class="w-100 mt-4">
       <app-log-input
         type="email"
@@ -14,6 +17,9 @@
         label="{{  'form.input.label.email' | translate }}"
         icon="envelope-fill"
         placeholder="Az: "
+        formControlName="email"
+        name="email"
+        ngDefaultControl
       ></app-log-input>
     </div>
     <div class="w-100 mt-4">
@@ -23,20 +29,25 @@
         label="{{  'form.input.label.password' | translate }}"
         icon="shield-lock-fill"
         placeholder="Az: "
+        formControlName="password"
+        name="password"
+        ngDefaultControl
       ></app-log-input>
       <div class="w-100 log-options text-end mt-2 pe-3">
         {{  'form.input.label.password' | translate }}
         <span routerLink="../forgot-password"> {{  'form.utils.forgot' | translate }}? </span>
       </div>
     </div>
-  </div>
+  </form>
   <div class="w-100 d-flex flex-column content-submit my-4">
     <div class="w-100 d-flex p-0 justify-content-center content-error overflow-hidden">
-      <p class="d-flex text-center w-100 m-0 p-0 text-danger"></p>
+      <p class="d-flex text-center w-100 m-0 p-0 text-danger">
+        {{ this.error }}
+      </p>
     </div>
     <app-log-button
-      routerLink="../../account"
       label="{{  'form.button.label.sign-in' | translate }}"
+      (click)="this.onSubmit()"
     ></app-log-button>
     <div class="w-100 log-options text-center mb-3 mt-1">
       {{  'form.utils.sign-in-text' | translate }}?

@@ -4,6 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -26,6 +27,9 @@ import { AccountInfosComponent } from './views/pages/account-infos/account-infos
 import { AccountProjectItemComponent } from './views/components/account-project-item/account-project-item.component';
 import { AccountProjectsListComponent } from './views/pages/account-projects-list/account-projects-list.component';
 import { AccountProjectsCreateComponent } from './views/pages/account-projects-create/account-projects-create.component';
+import { AccountProjectsFirstComponent } from './views/pages/account-projects-first/account-projects-first.component';
+import { AccountProjectsSecondComponent } from './views/pages/account-projects-second/account-projects-second.component';
+import { AccountProjectsThirdComponent } from './views/pages/account-projects-third/account-projects-third.component';
 
 @NgModule({
   declarations: [
@@ -46,9 +50,14 @@ import { AccountProjectsCreateComponent } from './views/pages/account-projects-c
     AccountInfosComponent,
     AccountProjectItemComponent,
     AccountProjectsListComponent,
-    AccountProjectsCreateComponent
+    AccountProjectsCreateComponent,
+    AccountProjectsFirstComponent,
+    AccountProjectsSecondComponent,
+    AccountProjectsThirdComponent
   ],
   imports: [
+    FormsModule,
+    ReactiveFormsModule,
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,

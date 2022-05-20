@@ -8,7 +8,6 @@ import { slideUpAnimation, Animations } from 'src/app/class/animations';
   animations: [ slideUpAnimation]
 })
 export class AccountProjectsComponent extends Animations implements OnInit {
-
   constructor() {
     super();
   }

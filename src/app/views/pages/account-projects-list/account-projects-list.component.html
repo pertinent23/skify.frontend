@@ -5,10 +5,15 @@
       <p class="m-0 position-absolute project-add-items-title text-uppercase"> Nouveau projet </p>
     </div>
   </div>
-  <div class="col col-6 col-sm-4 col-md-6 col-lg-4 col-xl-3 col-xxl-2 p-2">
-    <app-account-project-item title="Mon premier test"></app-account-project-item>
-  </div>
-  <div class="col col-6 col-sm-4 col-md-6 col-lg-4 col-xl-3 col-xxl-2 p-2">
-    <app-account-project-item title="Second test"></app-account-project-item>
+  <div
+    class="col col-6 col-sm-4 col-md-6 col-lg-4 col-xl-3 col-xxl-2 p-2"
+    *ngFor="let item of list | async"
+  >
+    <app-account-project-item
+      [title]="item.title"
+      [description]="item.description"
+      [id]="item.projectID"
+      [data]="item.data"
+    ></app-account-project-item>
   </div>
 </div>

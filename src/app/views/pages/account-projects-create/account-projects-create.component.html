@@ -1,16 +1,43 @@
 <div class="w-100 form-create-container d-flex align-items-center py-4">
   <div class="form-create d-flex flex-column align-items-center">
-    <div class="d-flex flex-column justify-content-center align-content-center container px-0 px-md-5">
+    <div
+      class="d-flex flex-column justify-content-center align-content-center container px-0 px-md-5"
+      [formGroup]="project"
+    >
       <div class="form-floating">
-        <input type="text" name="name" id="name" placeholder="Az:" class="form-control">
-        <label for="name"> Nom: </label>
+        <input
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Az:"
+          class="form-control"
+          formControlName="title"
+        >
+        <label for="name"> Titre: </label>
       </div>
       <div class="form-floating mt-5">
-        <textarea class="form-control" placeholder="Az:" name="description" id="description" cols="30" rows="10"></textarea>
+        <textarea
+          class="form-control"
+          placeholder="Az:"
+          name="description"
+          id="description"
+          cols="30"
+          rows="10"
+          formControlName="description"
+        ></textarea>
         <label for="name"> Description du projet: </label>
       </div>
+      <div class="w-100 mt-3 d-flex p-0 justify-content-center content-error text-center overflow-hidden">
+        <span class="d-flex text-center m-0 p-0 text-danger">
+          {{ this.error }}
+        </span>
+      </div>
       <div class="content-button w-100 d-flex justify-content-center align-items-center mt-5">
-        <button type="button" class="btn shadow create-project px-4 py-2 d-flex align-items-center justify-content-center">
+        <button
+          type="button"
+          class="btn shadow create-project px-4 py-2 d-flex align-items-center justify-content-center"
+          (click)="onSubmit()"
+        >
           <i class="bi bi-patch-plus-fill me-2"></i>
           <span> Créer </span>
         </button>

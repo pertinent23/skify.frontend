@@ -7,10 +7,10 @@
   .form-create-container{
     min-height: calc( 100vh - 150px );
 
-    .form-create{
+    .form-create, .form-decorator{
       flex: 1;
 
-      input, textarea{
+      input, textarea, select{
         border: none;
         border-bottom: 4px solid $purple;
         outline: none;
@@ -39,21 +39,12 @@
         height: 50px;
       }
 
-      .create-project{
-        background-color: $purple;
-        color: $cultured;
-        font-size: 0.9em;
-        box-shadow: none;
-        border-radius: 25px;
+      select{
+        height: 60px;
 
-        i{
-          font-size: 20px;
-        }
-
-        span{
-          text-transform: uppercase;
+        +label{
+          color: $purple !important;
           font-weight: 600;
-          letter-spacing: 0.13em;
         }
       }
     }
@@ -61,8 +52,30 @@
     .form-decorator{
       max-width: 300px;
 
+      @media screen and ( max-width: 576px ) {
+        max-width: none !important;
+      }
+
       img{
         max-width: 100%;
+      }
+    }
+
+    .create-project{
+      background-color: $purple;
+      color: $cultured;
+      font-size: 0.9em;
+      box-shadow: none;
+      border-radius: 25px;
+
+      i{
+        font-size: 20px;
+      }
+
+      span{
+        text-transform: uppercase;
+        font-weight: 600;
+        letter-spacing: 0.13em;
       }
     }
   }

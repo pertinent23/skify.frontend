@@ -13,7 +13,7 @@ export class AccountBaseComponent extends Animations implements OnInit {
     super();
   }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
+  logOut() {}
 }

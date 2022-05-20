@@ -6,7 +6,9 @@
     class="form-control"
     [placeholder]="this.placeholder"
     [value]="this.input"
-    (change)="this.inputChange.emit( field.value )"
+    (input)="this.inputChange.emit(field.value)"
+    (change)="this._onChange(field.value)"
+    (blur)="this._onTouch()"
     #field
   >
   <i class="bi bi-{{ this.icon }}"></i>

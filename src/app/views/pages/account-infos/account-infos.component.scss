@@ -1,0 +1,23 @@
+@use 'src/mixins' as *;
+
+
+.content-infos{
+  background-color: $cultured;
+  border-radius: 8px;
+  min-height: 350px;
+
+  .icon{
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+    background-color: $purple;
+    color: $cultured;
+    position: absolute;
+    left: -15px;
+    top: -15px;
+
+    i{
+      font-size: 28px;
+    }
+  }
+}

@@ -45,13 +45,15 @@
         <button class="btn account-nav-button mx-2 d-none d-md-block">
           <i class="bi bi-globe2"></i>
         </button>
-        <button class="btn account-nav-button mx-2 d-none d-md-block">
-          <i class="bi bi-gear-fill"></i>
-        </button>
-        <button class="btn account-nav-button mx-2 d-none d-md-block">
+        <button
+          class="btn account-nav-button mx-2 d-none d-md-block"
+          (click)="this.logOut()"
+        >
           <i class="bi bi-power"></i>
         </button>
-        <button class="btn account-nav-button mx-2">
+        <button
+          class="btn account-nav-button mx-2 d-md-none"
+        >
           <i class="bi bi-text-indent-left"></i>
         </button>
       </div>

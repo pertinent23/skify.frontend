@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+import { AuthGuard } from './guards/auth.guard';
+import { IsProjectGuard } from './guards/is-project.guard';
+
 import { LangBaseComponent } from './views/pages/lang-base/lang-base.component';
 
 import { LogBaseComponent } from './views/pages/log-base/log-base.component';
@@ -16,6 +19,9 @@ import { AccountInfosComponent } from './views/pages/account-infos/account-infos
 import { AccountProjectsComponent } from './views/pages/account-projects/account-projects.component';
 import { AccountProjectsListComponent } from './views/pages/account-projects-list/account-projects-list.component';
 import { AccountProjectsCreateComponent } from './views/pages/account-projects-create/account-projects-create.component';
+import { AccountProjectsFirstComponent } from './views/pages/account-projects-first/account-projects-first.component';
+import { AccountProjectsSecondComponent } from './views/pages/account-projects-second/account-projects-second.component';
+import { AccountProjectsThirdComponent } from './views/pages/account-projects-third/account-projects-third.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/fr/log/sign-in', pathMatch: 'full', data: { animation: 'base' } },
@@ -28,21 +34,48 @@ const routes: Routes = [
       { path: 'forgot-password', component: LogForgotPasswordComponent, data: { animation: 'log-forgot-password' } },
       { path: 'change-password', component: LogChangePasswordComponent, data: { animation: 'log-change-password' } },
     ] },
-    { path: 'account', component: AccountBaseComponent, data: { animation: 'account' }, children: [
-      { path: '', redirectTo: 'projects', pathMatch: 'full' },
-      { path: 'profile', component: AccountProfileComponent, data: { animation: 'account-profile' } },
-      { path: 'projects', component: AccountProjectsComponent, data: { animation: 'account-projects' }, children: [
-        { path: '', redirectTo: 'list', pathMatch: 'full' },
-        { path: 'list', component: AccountProjectsListComponent, data: { animation: 'account-projects-list' } },
-        { path: 'create', component: AccountProjectsCreateComponent, data: { animation: 'account-projects-create' } }
-      ] },
-      { path: 'infos', component: AccountInfosComponent, data: { animation: 'account-infos' } }
-    ] }
+    { path: 'account',
+      component: AccountBaseComponent,
+      data: { animation: 'account' },
+      canActivate: [ AuthGuard ],
+      children: [
+        { path: '', redirectTo: 'projects', pathMatch: 'full' },
+        { path: 'profile', component: AccountProfileComponent, data: { animation: 'account-profile' } },
+        { path: 'projects', component: AccountProjectsComponent, data: { animation: 'account-projects' }, children: [
+          { path: '', redirectTo: 'list', pathMatch: 'full' },
+          { path: 'list', component: AccountProjectsListComponent, data: { animation: 'account-projects-list' } },
+          { path: 'create', component: AccountProjectsCreateComponent, data: { animation: 'account-projects-create' } },
+          {
+            path: 'first/:id',
+            component: AccountProjectsFirstComponent,
+            data: { animation: 'account-projects-first' },
+            canActivate: [ IsProjectGuard ]
+          },
+          {
+            path: 'second/:id',
+            component: AccountProjectsSecondComponent,
+            data: { animation: 'account-projects-second' },
+            canActivate: [ IsProjectGuard ]
+          },
+          {
+            path: 'third/:id',
+            component: AccountProjectsThirdComponent,
+            data: { animation: 'account-projects-third' },
+            canActivate: [ IsProjectGuard ]
+          },
+        ] },
+        { path: 'infos', component: AccountInfosComponent, data: { animation: 'account-infos' } }
+      ]
+    }
   ] },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [
+    AuthGuard,
+    IsProjectGuard
+  ]
 })
 export class AppRoutingModule { }
