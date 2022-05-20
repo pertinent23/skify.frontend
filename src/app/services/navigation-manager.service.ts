@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class NavigationManagerService {
-
+  title: string = '';
   constructor(
     private translate: TranslateService,
     private router: Router
@@ -17,6 +17,7 @@ export class NavigationManagerService {
       title = document.getElementsByTagName( 'title' )[ 0 ];
     if ( title ) {
       title.textContent = val;
+      this.title = val;
     }
   }
 

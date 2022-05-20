@@ -1,20 +1,24 @@
 @use './../account-projects-first/account-projects-first.component.scss';
 @use 'src/mixins' as *;
 
-.presentation-data-item{
-  background-color: $purple;
-  border-radius: 5px;
-  color: $cultured;
+.presentation-data{
+  flex-wrap: wrap;
 
-  span{
-    font-size: 0.9em;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    font-weight: 600;
-    cursor: pointer;
-  }
+  .presentation-data-item{
+    background-color: $purple;
+    border-radius: 5px;
+    color: $cultured;
 
-  i{
-    cursor: pointer;
+    span{
+      font-size: 0.9em;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    i{
+      cursor: pointer;
+    }
   }
 }

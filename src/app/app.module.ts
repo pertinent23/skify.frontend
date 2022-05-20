@@ -30,6 +30,7 @@ import { AccountProjectsCreateComponent } from './views/pages/account-projects-c
 import { AccountProjectsFirstComponent } from './views/pages/account-projects-first/account-projects-first.component';
 import { AccountProjectsSecondComponent } from './views/pages/account-projects-second/account-projects-second.component';
 import { AccountProjectsThirdComponent } from './views/pages/account-projects-third/account-projects-third.component';
+import { TitleComponent } from './views/components/title/title.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { AccountProjectsThirdComponent } from './views/pages/account-projects-th
     AccountProjectsCreateComponent,
     AccountProjectsFirstComponent,
     AccountProjectsSecondComponent,
-    AccountProjectsThirdComponent
+    AccountProjectsThirdComponent,
+    TitleComponent
   ],
   imports: [
     FormsModule,

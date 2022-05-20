@@ -1,48 +1,124 @@
+<app-title title="Etape 1"></app-title>
 <div class="w-100 form-create-container d-flex align-items-center py-4">
   <div class="d-flex flex-column flex-md-row justify-content-center align-items-start w-100">
-    <div class="form-create d-flex flex-column align-items-center w-100">
+    <div
+      class="form-create d-flex flex-column align-items-center w-100"
+      [formGroup]="current"
+    >
       <div class="d-flex flex-column justify-content-center align-content-center container px-0 px-md-5">
         <div class="fieldset d-flex flex-column w-100 px-3 py-4" data-title="Propriété du point d'accès">
           <div class="form-floating">
-            <input type="number" name="px1" id="px1" placeholder="Az:" class="form-control">
+            <input
+              type="number"
+              name="px1"
+              id="px1"
+              placeholder="Az:"
+              class="form-control"
+              formControlName="px1"
+              (blur)="save()"
+            >
             <label for="px1"> Puissance d'émission px1: </label>
           </div>
           <div class="form-floating mt-3">
-            <input type="number" name="px2" id="px2" placeholder="Az:" class="form-control">
+            <input
+              type="number"
+              name="px2"
+              id="px2"
+              placeholder="Az:"
+              class="form-control"
+              formControlName="px2"
+              (blur)="save()"
+            >
             <label for="px2"> Puissance d'émission px2: </label>
           </div>
           <hr>
           <div class="form-floating">
-            <input type="number" name="sx1" id="sx1" placeholder="Az:" class="form-control">
+            <input
+              type="number"
+              name="sx1"
+              id="sx1"
+              placeholder="Az:"
+              class="form-control"
+              formControlName="sx1"
+              (blur)="save()"
+            >
             <label for="sx1"> Seuil de réception sx1: </label>
           </div>
           <div class="form-floating mt-3">
-            <input type="number" name="sx2" id="sx2" placeholder="Az:" class="form-control">
+            <input
+              type="number"
+              name="sx2"
+              id="sx2"
+              placeholder="Az:"
+              class="form-control"
+              formControlName="sx2"
+              (blur)="save()"
+            >
             <label for="sx2"> Seuil de réception px2: </label>
           </div>
         </div>
         <div class="fieldset d-flex flex-column w-100 px-3 py-4 mt-4" data-title="Propriété de l'antenne">
           <div class="form-floating">
-            <input type="number" name="g1" id="g1" placeholder="Az:" class="form-control">
+            <input
+              type="number"
+              name="g1"
+              id="g1"
+              placeholder="Az:"
+              class="form-control"
+              formControlName="g1"
+              (blur)="save()"
+            >
             <label for="g1"> Gain d'entènne G1: </label>
           </div>
           <div class="form-floating mt-3">
-            <input type="number" name="g2" id="g2" placeholder="Az:" class="form-control">
+            <input
+              type="number"
+              name="g2"
+              id="g2"
+              placeholder="Az:"
+              class="form-control"
+              formControlName="g2"
+              (blur)="save()"
+            >
             <label for="g2"> Gain d'entènne G2: </label>
           </div>
         </div>
         <div class="fieldset d-flex flex-column w-100 px-3 py-4 mt-4" data-title="Propriété du cable">
           <div class="form-floating">
-            <input type="number" name="l1" id="l1" placeholder="Az:" class="form-control">
+            <input
+              type="number"
+              name="l1"
+              id="l1"
+              placeholder="Az:"
+              class="form-control"
+              formControlName="l1"
+              (blur)="save()"
+            >
             <label for="l1"> Perte de cable l1: </label>
           </div>
           <div class="form-floating mt-3">
-            <input type="number" name="l2" id="l2" placeholder="Az:" class="form-control">
+            <input
+              type="number"
+              name="l2"
+              id="l2"
+              placeholder="Az:"
+              class="form-control"
+              formControlName="l2"
+              (blur)="save()"
+            >
             <label for="l2"> Perte de cable l2: </label>
           </div>
           <div class="form-floating mt-3">
-            <input type="number" name="l3" id="l3" placeholder="Az:" class="form-control">
-            <label for="l3"> Perte de cable l3: </label>
+            <input
+              type="number"
+              name="l3"
+              id="l3"
+              placeholder="Az:"
+              class="form-control"
+              formControlName="l3"
+              (blur)="save()"
+            >
+            <label for="l3"> Longueur du cable l3: </label>
           </div>
         </div>
       </div>
@@ -51,11 +127,15 @@
       <div class="fieldset d-flex flex-column w-100 px-3 py-4 mt-4" data-title="Résultat">
         <div class="data-item d-flex flex-column">
           <label for="r1"> Affaiblissement tolerable: </label>
-          <output class="mt-1" name="r1" id="r1" for="px1 px2 sx1 sx2 l1 l2 l3"> 00 </output>
+          <output class="mt-1" name="r1" id="r1" for="px1 px2 sx1 sx2 l1 l2 l3">
+            {{ this.getAT() }}
+          </output>
         </div>
         <div class="data-item d-flex flex-column mt-5">
           <label for="r2"> Rayon de la cellule: </label>
-          <output class="mt-1" name="r2" id="r2" for="px1 px2 sx1 sx2 l1 l2 l3"> 00 </output>
+          <output class="mt-1" name="r2" id="r2" for="px1 px2 sx1 sx2 l1 l2 l3">
+            {{ this.getR() }}
+          </output>
         </div>
       </div>
       <div class="content-button w-100 d-flex justify-content-center align-items-center mt-5">
