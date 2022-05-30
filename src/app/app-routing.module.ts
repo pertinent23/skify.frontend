@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AuthGuard } from './guards/auth.guard';
 import { IsProjectGuard } from './guards/is-project.guard';
+import { BlockedComponent } from './views/pages/blocked/blocked.component';
 
 import { LangBaseComponent } from './views/pages/lang-base/lang-base.component';
 
@@ -29,8 +30,8 @@ const routes: Routes = [
     { path: '', redirectTo: 'log', pathMatch: 'full', data: { animation: 'lang-home' } },
     { path: 'log', component: LogBaseComponent, data: { animation: 'log' }, children: [
       { path: '', redirectTo: 'sign-in', pathMatch: 'full', data: { animation: 'log-home' }  },
-      { path: 'sign-in', component: LogSignInComponent, data: { animation: 'log-sign-in' } },
-      { path: 'sign-up', component: LogSignUpComponent, data: { animation: 'log-sin-up' } },
+      { path: 'sign-in', component: /*LogSignInComponent*/ BlockedComponent, data: { animation: 'log-sign-in' } },
+      { path: 'sign-up', component: /*LogSignUpComponent*/ BlockedComponent, data: { animation: 'log-sin-up' } },
       { path: 'forgot-password', component: LogForgotPasswordComponent, data: { animation: 'log-forgot-password' } },
       { path: 'change-password', component: LogChangePasswordComponent, data: { animation: 'log-change-password' } },
     ] },

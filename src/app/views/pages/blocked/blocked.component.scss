@@ -1,0 +1,9 @@
+@use 'src/mixins' as *;
+
+.text-warm{
+  color: $purple;
+}
+
+i{
+  font-size: 100px;
+}

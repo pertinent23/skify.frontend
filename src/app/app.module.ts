@@ -31,6 +31,7 @@ import { AccountProjectsFirstComponent } from './views/pages/account-projects-fi
 import { AccountProjectsSecondComponent } from './views/pages/account-projects-second/account-projects-second.component';
 import { AccountProjectsThirdComponent } from './views/pages/account-projects-third/account-projects-third.component';
 import { TitleComponent } from './views/components/title/title.component';
+import { BlockedComponent } from './views/pages/blocked/blocked.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +56,8 @@ import { TitleComponent } from './views/components/title/title.component';
     AccountProjectsFirstComponent,
     AccountProjectsSecondComponent,
     AccountProjectsThirdComponent,
-    TitleComponent
+    TitleComponent,
+    BlockedComponent
   ],
   imports: [
     FormsModule,
